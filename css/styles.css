@@ -104,8 +104,7 @@ a:hover {
 /* Sections */
 section {
     padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 section h2 {
@@ -115,24 +114,143 @@ section h2 {
     text-align: center;
 }
 
+section h3 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
 section p {
     font-size: 1.1rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 2rem;
     text-align: center;
 }
 
 /* About Section */
 #about {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    width: 100%;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-content {
     background: #fff;
-    border-radius: 10px;
-    margin: 2rem;
+    border-radius: 15px;
+    padding: 2rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.about-content h2 {
+    text-align: center;
+}
+
+.about-content h3 {
+    color: #667eea;
+    text-align: left;
+}
+
+.about-content p {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.expertise-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 2rem 0;
+}
+
+.expertise-list li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.expertise-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.technologies-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.technologies-section h3 {
+    text-align: center;
+    color: #333;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tech-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+.tech-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1);
+}
+
+.tech-item p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
 }
 
 /* Courses Section */
 #courses {
     background: #f9f9f9;
+    width: 100%;
 }
 
 .course-grid {
@@ -140,6 +258,10 @@ section p {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
 }
 
 .course {
@@ -163,9 +285,12 @@ section p {
 /* Contact Section */
 #contact {
     background: #fff;
-    border-radius: 10px;
-    margin: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+#contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-info {
@@ -278,8 +403,20 @@ footer {
     .course-grid {
         grid-template-columns: 1fr;
     }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
     section {
         padding: 2rem 1rem;
+    }
+
+    .about-container {
+        padding: 1rem;
+    }
+
+    .expertise-list li {
+        font-size: 0.95rem;
     }
 }
